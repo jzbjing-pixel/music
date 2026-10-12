@@ -1,9 +1,0 @@
-{
-  "id": "rill.music",
-  "name": "音乐播放器",
-  "version": "0.1.5",
-  "minHostApi": 2,
-  "capabilities": ["ui.render", "tables.read", "records.read", "content.read", "state.read", "state.write", "media.playback"],
-  "distribution": "trusted-bundled-plugin",
-  "entry": "index.ts"
-}

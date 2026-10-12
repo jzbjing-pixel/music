@@ -1,13 +1,5 @@
-node_modules/
-dist/
-target/
-build/
-.gradle/
-.kotlin/
-.idea/
-local.properties
-*.jks
-*.keystore
-.env
-.env.*
-*.log
+# Source stays local; this repository only tracks release information.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
