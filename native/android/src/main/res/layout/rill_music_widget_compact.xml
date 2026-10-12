@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/music_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center_vertical" android:padding="10dp" android:background="@drawable/rill_music_background">
+ <ImageView android:id="@+id/music_record" android:layout_width="68dp" android:layout_height="68dp" android:src="@drawable/rill_music_record" android:contentDescription="音乐唱片"/>
+ <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+  <TextView android:id="@+id/music_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="未选择歌曲" android:textSize="14sp" android:textStyle="bold" android:textColor="#202024" android:singleLine="true" android:ellipsize="end"/>
+  <TextView android:id="@+id/music_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="本地音乐" android:textSize="11sp" android:textColor="#73737B" android:singleLine="true" android:ellipsize="end"/>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginTop="5dp">
+   <ProgressBar android:id="@+id/music_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_weight="1" android:layout_height="2dp" android:progressTint="#243FB3" android:progressBackgroundTint="#DCDCE1"/>
+   <TextView android:id="@+id/music_elapsed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="0:00" android:textSize="9sp" android:textColor="#73737B"/>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="28dp" android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginTop="3dp">
+   <ImageView android:id="@+id/music_previous" android:layout_width="38dp" android:layout_height="28dp" android:padding="4dp" android:src="@drawable/rill_music_previous" android:contentDescription="上一首"/>
+   <ImageView android:id="@+id/music_toggle" android:layout_width="38dp" android:layout_height="28dp" android:padding="3dp" android:src="@drawable/rill_music_play" android:contentDescription="播放或暂停"/>
+   <ImageView android:id="@+id/music_next" android:layout_width="38dp" android:layout_height="28dp" android:padding="4dp" android:src="@drawable/rill_music_next" android:contentDescription="下一首"/>
+   <TextView android:id="@+id/music_open" android:layout_width="0dp" android:layout_weight="1" android:layout_height="28dp" android:gravity="end|center_vertical" android:text="↗" android:textSize="18sp" android:textColor="#73737B" android:contentDescription="打开播放器"/>
+  </LinearLayout>
+ </LinearLayout>
+</LinearLayout>

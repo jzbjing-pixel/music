@@ -1,0 +1,177 @@
+.music-workspace {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.music-intro {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 12px 0 28px;
+}
+.music-intro h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  margin: 8px 0;
+}
+.music-intro p,
+.music-now span {
+  color: var(--secondary);
+  font-size: 13px;
+}
+.music-disc,
+.music-cover {
+  display: grid;
+  place-items: center;
+  background: var(--surface-deep);
+  border-radius: 50%;
+  font-size: 34px;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+.music-library-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.music-library-controls label {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  min-width: 160px;
+  max-width: 100%;
+}
+.music-library-controls select,
+.music-list-head input {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 100%;
+  min-height: 42px;
+}
+.music-player-card {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+}
+.music-now {
+  display: grid;
+  gap: 7px;
+  align-content: center;
+  overflow-wrap: anywhere;
+}
+.music-now small {
+  color: var(--secondary);
+}
+.music-now strong {
+  font-size: 20px;
+}
+.music-player-card audio {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+.music-transport {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.music-transport [aria-pressed="true"] {
+  background: var(--surface-deep);
+}
+.music-list-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 24px 0 14px;
+}
+.music-list-head h3 small {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 400;
+}
+.music-track-list {
+  border-top: 1px solid var(--line);
+}
+.music-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  padding: 15px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.music-track > span {
+  width: 25px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+.music-track > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+}
+.music-track strong,
+.music-track small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.music-track small {
+  color: var(--secondary);
+  font-size: 11px;
+}
+.music-track.is-playing {
+  background: var(--surface-deep);
+  border-radius: 12px;
+}
+.music-empty {
+  padding: 36px 15px;
+  text-align: center;
+  color: var(--secondary);
+  font-size: 13px;
+}
+@media (max-width: 480px) {
+  .music-intro {
+    gap: 14px;
+  }
+  .music-disc {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+  }
+  .music-player-card {
+    padding: 16px;
+    grid-template-columns: 55px minmax(0, 1fr);
+  }
+  .music-cover {
+    width: 55px;
+    height: 55px;
+  }
+  .music-now strong {
+    font-size: 17px;
+  }
+  .music-library-controls label {
+    width: 100%;
+  }
+  .music-transport .subtle-button {
+    flex: 1;
+    min-width: 95px;
+    padding: 10px 8px;
+  }
+  .music-list-head label,
+  .music-list-head input {
+    width: 100%;
+  }
+}

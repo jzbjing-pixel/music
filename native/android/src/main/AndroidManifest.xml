@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+ <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+ <uses-permission android:name="android.permission.WAKE_LOCK"/>
+ <application>
+  <service android:name="app.rill.music.PlaybackService" android:exported="false" android:foregroundServiceType="mediaPlayback"/>
+  <receiver android:name="app.rill.music.MusicWidget" android:exported="false" android:label="@string/rill_music_widget">
+   <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+   <meta-data android:name="android.appwidget.provider" android:resource="@xml/rill_music_widget"/>
+  </receiver>
+ </application>
+</manifest>

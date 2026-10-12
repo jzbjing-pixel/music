@@ -1,0 +1,32 @@
+.compact-music-card { display: grid; grid-template-columns: 106px minmax(0,1fr); align-items: center; gap: 23px; width: 100%; max-width: none; border-radius: 17px; border: 1px solid var(--line); background: var(--white); color: var(--text); padding: 17px 20px; min-width: 0; }
+.compact-music-card .home-music-disc { position: relative; display: grid; place-items: center; width: 106px; height: 106px; border-radius: 50%; background: repeating-radial-gradient(circle,#193bbe 0 9px,#284ed1 10px 12px,#193bbe 13px 20px); padding: 0; color: white; }
+.compact-music-card .home-music-disc > span { display: grid; place-items: center; width: 42%; height: 42%; border-radius: 50%; border: 7px solid #3055d5; background: #1c40be; }
+.compact-music-card .home-music-disc i { width: 5px; height: 5px; border-radius: 50%; background: #ecedff; }
+.compact-music-body { min-width: 0; }
+.compact-music-title { display: flex; align-items: flex-start; gap: 10px; justify-content: space-between; }
+.compact-music-title > div { min-width: 0; }
+.compact-music-title strong, .compact-music-title small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.compact-music-title strong { font-size: 15px; font-weight: 550; line-height: 1.4; }
+.compact-music-title small { color: var(--secondary); font-size: 11px; margin-top: 4px; }
+.compact-music-card button { min-width: 0; padding: 0; }
+.compact-music-card .home-music-remove { color: var(--muted); width: 22px; height: 22px; font-size: 20px; flex: none; }
+.compact-music-progress { display: flex; gap: 12px; align-items: center; margin-top: 13px; }
+.compact-music-progress > span { color: var(--secondary); font-size: 10px; font-variant-numeric: tabular-nums; }
+.compact-music-card .home-music-progress { width: 100%; appearance: none; height: 2px; background: var(--line); accent-color: #243fb3; min-width: 0; }
+.compact-music-card .home-music-progress::-webkit-slider-thumb { appearance: none; width: 5px; height: 5px; border-radius: 50%; background: #243fb3; }
+.compact-music-card .home-music-progress::-moz-range-thumb { width: 5px; height: 5px; border-radius: 50%; border: 0; background: #243fb3; }
+.compact-music-card .home-music-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 7px; }
+.compact-music-card .home-music-transport { display: flex; align-items: center; gap: 12px; }
+.compact-music-card .home-music-transport button { display: grid; place-items: center; width: 32px; height: 32px; color: var(--text); background: transparent; }
+.compact-music-card .home-music-transport svg { width: 17px; height: 17px; }
+.compact-music-card .home-music-transport .home-music-play { width: 34px; height: 34px; border-radius: 50%; }
+.compact-music-card .home-music-transport button[aria-pressed="true"] { color: #2449c5; }
+.compact-music-card .home-music-open { width: 27px; height: 27px; color: var(--secondary); border-radius: 6px; font-size: 18px; }
+.compact-music-card button:disabled { opacity: .4; }
+.compact-music-card .home-music-error { grid-column: 1/-1; color: var(--accent); font-size: 11px; margin-top: 0; }
+.compact-music-card .home-music-disc.is-playing { animation: compact-record-spin 24s linear infinite; }
+@keyframes compact-record-spin { to { transform: rotate(360deg); } }
+@media (max-width:720px) { .compact-music-card { grid-template-columns: 76px minmax(0,1fr); gap: 13px; padding: 13px; border-radius: 14px; } .compact-music-card .home-music-disc { width: 76px; height: 76px; } .compact-music-title strong { font-size: 13px; } .compact-music-title small { font-size: 10px; } .compact-music-card .home-music-transport { gap: 5px; } .compact-music-card .home-music-transport button { width: 26px; height: 29px; } .compact-music-card .home-music-transport .home-music-play { width: 29px; height: 29px; } .compact-music-progress { gap: 6px; margin-top: 10px; } .compact-music-card .home-music-open { width: 22px; } }
+@media (max-width:350px) { .compact-music-card { grid-template-columns: 62px minmax(0,1fr); gap: 10px; padding: 11px; } .compact-music-card .home-music-disc { width: 62px; height: 62px; } .compact-music-card .home-music-transport { gap: 2px; } .compact-music-card .home-music-transport button { width: 24px; } }
+@media (prefers-reduced-motion:reduce) { .compact-music-card .home-music-disc.is-playing { animation: none; } }
+:root[data-motion="reduced"] .compact-music-card .home-music-disc.is-playing { animation: none; }
