@@ -1,0 +1,8 @@
+{
+  "id": "rill.music",
+  "version": "0.1.7",
+  "date": "2026-10-13",
+  "sha256": "22cea8c318b7ac41c164dcfcd186f39eb1b60e565f9ec712e10b103238c981a8",
+  "requiresHost": "Rill 2026-10-13 development host or later with unified binding fields, navigation modules and thumbnail cache",
+  "previous": "0.1.6"
+}

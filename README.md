@@ -1,19 +1,19 @@
-# 音乐播放器 · Rill 插件发布仓库
+# 音乐播放器
 
-版本：0.1.6。仅发布编译后的签名安装包，源码在本地统一管理。
+当前签名版本：**0.1.7**。移动端全屏、线性搓碟、统一主题与宿主导航。
 
-需要 2026-10-12 或更新构建的 Rill 安装版，使用统一 Host API 2。
+## 安装
 
-在插件管理中添加仓库 https://github.com/jzbjing-pixel/music ，选择 Git 仓库安装，资源名为 rill-plugin.git.zip。
+在 Rill 插件管理中添加 GitHub 仓库 `jzbjing-pixel/music`，使用本仓库 `publisher.json` 的原发布者公钥和 `rill-plugin.git.zip` 下载入口，检查更新后选择安装。`dist/rill-plugin.git.zip` 始终指向本仓库最新正式签名包。
 
-发布者公钥：
+本次版本需要包含 2026-10-13 统一连接、字段补齐、列表/标签/筛选模块、主题与缩略图缓存实现的新版 Rill 宿主。只更新插件不会更新宿主；旧宿主请保留原插件版本并先更新宿主。Host API 协议仍为 2，协议号本身不代表具备本次新增能力。
 
-```text
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAES96DC8g3RGsZdE3OqgYVX6x0zta4zdkfLGxPYJ+ZM60U4zJlUmIOroP5O6ClDUKMp9tX6iIxOTqFrGIGhZksag==
-```
+## 版本保留
 
-也可下载 dist/rill-plugin.git.zip，先添加上述发布者公钥，再从本地安装。
+本次新包保存在 [0.1.7](releases/0.1.7/rill-plugin.git.zip)，此前签名包保存在 [0.1.6](releases/0.1.6/rill-plugin.git.zip)。Git 历史继续保留，不重写旧版本。校验信息见 [release.json](releases/0.1.7/release.json)。
 
-插件数据保存于宿主多维表，卸载不删除业务数据。
+## 数据与安全
 
-歌曲／任务列表通过统一公共侧栏显示，主界面保留工作内容。
+沿用原发布者密钥。插件通过公共 Host API 访问授权数据；新表依据契约创建字段，旧表仅补缺失字段，现有值与原附件保留。字段类型冲突会拒绝保存。列表缩略图由宿主生成缓存，插件读取缩略图字段。
+
+此仓库用于签名运行包发布。开发源码保存在本地开发项目；发布包不包含私钥、个人数据或本地宿主内部实现。
